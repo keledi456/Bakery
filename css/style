@@ -90,6 +90,22 @@ footer {
         display: block;
         margin: 5px;
     }
+}function validateEnquiryForm() {
+    let name = document.forms["enquiryForm"]["name"].value;
+    let email = document.forms["enquiryForm"]["email"].value;
+
+    if (name == "" || email == "") {
+        alert("Please fill in all fields");
+        return false;
+    }
+
+    if (!email.includes("@")) {
+        alert("Please enter a valid email");
+        return false;
+    }
+
+    alert("Enquiry submitted successfully!");
+    return true;
 }
 
 
